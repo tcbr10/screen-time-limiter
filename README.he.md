@@ -43,7 +43,7 @@
 
 ## בנייה והתקנה מקוד המקור (במחשב Windows)
 
-1. התקינו את ‎[.NET 10 SDK](https://dotnet.microsoft.com/download).
+1. התקינו את ‎[‎.NET 10 SDK](https://dotnet.microsoft.com/download)
 2. פתחו PowerShell **כמנהל** בתיקייה הזו.
 3. הריצו את הבדיקות, ואז התקינו:
 
