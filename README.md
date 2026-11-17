@@ -1,5 +1,13 @@
 # Screen Limiter
 
+<div dir="rtl">
+
+**מגביל זמן מסך** – תוכנה חינמית שמגבילה את זמן השימוש של ילדים במחשב Windows: מכסה יומית, מכסה שבועית או שעות מותרות.
+
+📖 **[מדריך התקנה ושימוש בעברית](docs/user-guide-he.md)** · ⬇️ **[הורדה](https://github.com/tcbr10/screen-time-limiter/releases/latest)**
+
+</div>
+
 Limits how long local users can use a Windows PC. An administrator sets, per user, one of:
 
 - **Daily limit**: so many hours a day, the same every day or different per weekday.
@@ -10,7 +18,6 @@ The interface is in Hebrew (right-to-left) or English, switchable in the admin c
 
 **Download:** [latest release](https://github.com/tcbr10/screen-time-limiter/releases/latest) — unzip, double-click `Install.cmd`.
 Nothing else needs to be installed.
-**מדריך התקנה ושימוש בעברית:** [docs/user-guide-he.md](docs/user-guide-he.md)
 
 > **Status (2026-11-16):** builds with no warnings, 47 rule tests pass, installed and tested end to end on a
 > Windows 11 VM. See [HANDOFF.md](HANDOFF.md) for what was checked and what is still open.
