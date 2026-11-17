@@ -1,10 +1,12 @@
 # Screen Limiter
 
+**English** · [עברית](README.he.md)
+
 <div dir="rtl">
 
 **מגביל זמן מסך** – תוכנה חינמית שמגבילה את זמן השימוש של ילדים במחשב Windows: מכסה יומית, מכסה שבועית או שעות מותרות.
 
-📖 **[מדריך התקנה ושימוש בעברית](docs/user-guide-he.md)** · ⬇️ **[הורדה](https://github.com/tcbr10/screen-time-limiter/releases/latest)**
+📖 **[מדריך התקנה ושימוש בעברית](docs/user-guide-he.md)** · ⬇️ **[הורדה](https://github.com/tcbr10/screen-time-limiter/releases/latest)** · 🇮🇱 **[קובץ README המלא בעברית](README.he.md)**
 
 </div>
 
