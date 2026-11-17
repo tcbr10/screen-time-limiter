@@ -8,6 +8,10 @@ Limits how long local users can use a Windows PC. An administrator sets, per use
 
 The interface is in Hebrew (right-to-left) or English, switchable in the admin console.
 
+**Download:** [latest release](https://github.com/tcbr10/screen-time-limiter/releases/latest) — unzip, double-click `Install.cmd`.
+Nothing else needs to be installed.
+**מדריך התקנה ושימוש בעברית:** [docs/user-guide-he.md](docs/user-guide-he.md)
+
 > **Status (2026-11-16):** builds with no warnings, 47 rule tests pass, installed and tested end to end on a
 > Windows 11 VM. See [HANDOFF.md](HANDOFF.md) for what was checked and what is still open.
 
@@ -32,7 +36,7 @@ Time counts only while the user's session is active and unlocked. When time runs
    sign-in screen, and does so again each time the user comes back.
 3. With "Sign the user out" selected, the user is signed out 30 seconds after time runs out.
 
-## Build and install (on the Windows PC)
+## Build and install from source (on the Windows PC)
 
 1. Install the [.NET 10 SDK](https://dotnet.microsoft.com/download).
 2. Open PowerShell **as administrator** in this folder.
@@ -47,6 +51,9 @@ Time counts only while the user's session is active and unlocked. When time runs
 4. Open **Screen Limiter** from the Start menu, set a parent PIN, pick a user, and set a limit.
 
 To remove it: `.\scripts\uninstall.ps1` (add `-RemoveData` to delete saved limits too).
+
+To build the download package (a self-contained zip with `Install.cmd` / `Uninstall.cmd`): `.\scripts\package.ps1`.
+It lands in `out\ScreenLimiter-<version>.zip`.
 
 ## What makes it hard to bypass
 

@@ -326,7 +326,8 @@ public partial class MainWindow : Window
             else _current.DailyMinutes[row.DayIndex] = minutes;
 
             if (!readTimes) continue;
-            if (TryParseTime(row.Start, out var start) && TryParseTime(row.End, out var end) && start < end)
+            // Start equal to end is an empty window: that day is blocked.
+            if (TryParseTime(row.Start, out var start) && TryParseTime(row.End, out var end) && start <= end)
             {
                 window.StartMinute = start;
                 window.EndMinute = end;

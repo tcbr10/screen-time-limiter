@@ -50,7 +50,7 @@
                 <DockPanel>
                     <Border DockPanel.Dock="Bottom" BorderBrush="{StaticResource Line}" BorderThickness="0,1,0,0" Padding="10">
                         <StackPanel>
-                            <Button Click="Pin_Click" HorizontalContentAlignment="Stretch">
+                            <Button Click="Pin_Click" HorizontalContentAlignment="Stretch" AutomationProperties.Name="{local:T pin.button}">
                                 <StackPanel Orientation="Horizontal">
                                     <Viewbox Width="14" Height="14" FlowDirection="LeftToRight" Margin="0,0,6,0">
                                         <Canvas Width="24" Height="24">
@@ -99,7 +99,7 @@
                 <StackPanel x:Name="Editor" Margin="16,14" IsEnabled="False">
 
                     <DockPanel Margin="0,0,0,12">
-                        <Button x:Name="GrantButton" DockPanel.Dock="Right" Click="Grant_Click">
+                        <Button x:Name="GrantButton" DockPanel.Dock="Right" Click="Grant_Click" AutomationProperties.Name="{local:T edit.addtime}">
                             <StackPanel Orientation="Horizontal">
                                 <Viewbox Width="12" Height="12" Margin="0,0,6,0">
                                     <Canvas Width="24" Height="24">

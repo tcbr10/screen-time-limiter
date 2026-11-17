@@ -132,8 +132,8 @@ public static class Loc
         ["edit.addtime"] = ("הוספת זמן להיום", "Add time today"),
         ["edit.saved"] = ("נשמר", "Saved"),
         ["edit.added"] = ("נוספו {0}", "Added {0}"),
-        ["edit.err.time"] = ("שעה לא תקינה. הקלידו בתבנית 16:00, כשההתחלה לפני הסיום.",
-            "That time isn't valid. Use the form 16:00, with the start before the end."),
+        ["edit.err.time"] = ("שעה לא תקינה. הקלידו בתבנית 16:00, כשההתחלה אינה אחרי הסיום.",
+            "That time isn't valid. Use the form 16:00, with the start no later than the end."),
 
         ["pin.button"] = ("קוד הורה", "Parent PIN"),
         ["pin.title"] = ("הגדרת קוד הורה", "Set parent PIN"),
