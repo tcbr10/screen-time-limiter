@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ScreenLimiter.Core/ScreenLimiter.Core.csproj" />
+    <Project Path="src/ScreenLimiter.Service/ScreenLimiter.Service.csproj" />
+    <Project Path="src/ScreenLimiter.Agent/ScreenLimiter.Agent.csproj" />
+    <Project Path="src/ScreenLimiter.Admin/ScreenLimiter.Admin.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ScreenLimiter.Core.Tests/ScreenLimiter.Core.Tests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <!-- Windows Forms is referenced only for the tray icon. -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>ScreenLimiter.Agent</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Keep the WinForms namespaces out of scope so WPF type names stay unambiguous. -->
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../ScreenLimiter.Core/ScreenLimiter.Core.csproj" />
+  </ItemGroup>
+</Project>

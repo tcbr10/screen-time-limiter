@@ -1,0 +1,1 @@
+CreateObject("WScript.Shell").Run "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -Command ""& { & 'C:\dev\ui.ps1' *>&1 | Out-File -Encoding utf8 'C:\dev\ui.out'; 'x' | Out-File 'C:\dev\ui.done' }""", 0, True

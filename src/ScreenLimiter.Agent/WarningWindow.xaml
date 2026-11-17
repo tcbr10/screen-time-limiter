@@ -1,0 +1,23 @@
+<Window x:Class="ScreenLimiter.Agent.WarningWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True" ShowActivated="False"
+        SizeToContent="WidthAndHeight" WindowStartupLocation="Manual"
+        AllowsTransparency="True" Background="Transparent"
+        FontFamily="Segoe UI" FontSize="14" Foreground="{StaticResource Text}">
+    <!-- Shown by the tray when a warning threshold passes. Click to dismiss; it also goes away by itself. -->
+    <Border Style="{StaticResource Card}" Width="290" Cursor="Hand" MouseLeftButtonUp="Card_Click">
+        <DockPanel>
+            <Viewbox DockPanel.Dock="Left" Width="20" Height="20" VerticalAlignment="Top" Margin="0,1,10,0">
+                <Canvas Width="24" Height="24">
+                    <Ellipse Width="20" Height="20" Canvas.Left="2" Canvas.Top="2" Stroke="#D97706" StrokeThickness="2" />
+                    <Path Stroke="#D97706" StrokeThickness="2" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Data="M12,7 L12,12 L15,14" />
+                </Canvas>
+            </Viewbox>
+            <StackPanel>
+                <TextBlock x:Name="TitleText" FontWeight="SemiBold" />
+                <TextBlock x:Name="BodyText" Foreground="{StaticResource Secondary}" FontSize="13" TextWrapping="Wrap" Margin="0,2,0,0" />
+            </StackPanel>
+        </DockPanel>
+    </Border>
+</Window>

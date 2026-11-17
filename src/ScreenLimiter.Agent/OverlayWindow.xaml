@@ -1,0 +1,42 @@
+<Window x:Class="ScreenLimiter.Agent.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True"
+        WindowStartupLocation="Manual" Background="#111827"
+        FontFamily="Segoe UI" FontSize="14" Foreground="{StaticResource Text}">
+    <!-- Opaque, so nothing behind it can be read or used. The root stays left-to-right so the
+         primary-screen placement below isn't mirrored; only the card flips. -->
+    <Grid FlowDirection="LeftToRight">
+        <Grid x:Name="PrimaryArea" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Border x:Name="Card" Background="{StaticResource Surface1}" CornerRadius="12" Padding="28,24" Width="380"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel>
+                    <!-- Empty hourglass, outline style -->
+                    <Viewbox Width="26" Height="26" HorizontalAlignment="Center">
+                        <Canvas Width="24" Height="24">
+                            <Path Stroke="{StaticResource Secondary}" StrokeThickness="1.8" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round"
+                                  Data="M6,20 L18,20 M6,4 L18,4 M7,20 L7,18 C7,15.2 9.2,13.6 12,12 C14.8,13.6 17,15.2 17,18 L17,20 M7,4 L7,6 C7,8.8 9.2,10.4 12,12 C14.8,10.4 17,8.8 17,6 L17,4" />
+                        </Canvas>
+                    </Viewbox>
+                    <TextBlock x:Name="TitleText" FontSize="16" FontWeight="Medium" HorizontalAlignment="Center" Margin="0,8,0,2" />
+                    <TextBlock x:Name="BodyText" FontSize="13" Foreground="{StaticResource Secondary}" HorizontalAlignment="Center"
+                               TextAlignment="Center" TextWrapping="Wrap" Margin="0,0,0,14" />
+
+                    <!-- Parent PIN and how much time to add. Enter adds it. -->
+                    <StackPanel x:Name="PinPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Grid Width="140">
+                            <PasswordBox x:Name="PinBox" MaxLength="8" FlowDirection="LeftToRight" KeyDown="PinBox_KeyDown"
+                                         PasswordChanged="PinBox_PasswordChanged" AutomationProperties.Name="PIN" />
+                            <TextBlock x:Name="PinHint" IsHitTestVisible="False" Foreground="{StaticResource Muted}" VerticalAlignment="Center" Margin="10,0" />
+                        </Grid>
+                        <ComboBox x:Name="MinutesBox" Width="110" Margin="8,0,0,0" KeyDown="PinBox_KeyDown" />
+                    </StackPanel>
+                    <TextBlock x:Name="ErrorText" Foreground="{StaticResource Danger}" FontSize="13" TextWrapping="Wrap"
+                               HorizontalAlignment="Center" TextAlignment="Center" Margin="0,8,0,0" Visibility="Collapsed" />
+
+                    <Button x:Name="SwitchButton" HorizontalAlignment="Center" Margin="0,12,0,0" Click="Switch_Click" />
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

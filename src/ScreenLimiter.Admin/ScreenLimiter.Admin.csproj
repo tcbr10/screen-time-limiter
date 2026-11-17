@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>ScreenLimiter.Admin</RootNamespace>
+    <!-- The manifest makes Windows ask for administrator approval every time the console opens. -->
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../ScreenLimiter.Core/ScreenLimiter.Core.csproj" />
+  </ItemGroup>
+</Project>
