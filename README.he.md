@@ -43,7 +43,7 @@
 
 ## בנייה והתקנה מקוד המקור (במחשב Windows)
 
-1. התקינו את [.NET 10 SDK](https://dotnet.microsoft.com/download).
+1. התקינו את <span dir="ltr">[.NET 10 SDK](https://dotnet.microsoft.com/download)</span>.
 2. פתחו PowerShell **כמנהל** בתיקייה הזו.
 3. הריצו את הבדיקות, ואז התקינו:
 
@@ -59,17 +59,17 @@ Set-ExecutionPolicy -Scope Process Bypass
 
 4. פתחו את **Screen Limiter** מתפריט התחל, הגדירו קוד הורה, בחרו משתמש וקבעו מגבלה.
 
-להסרה: `.\scripts\uninstall.ps1` (הוסיפו `-RemoveData` כדי למחוק גם את המגבלות השמורות).
+להסרה: <span dir="ltr">`.\scripts\uninstall.ps1`</span> (הוסיפו <span dir="ltr">`-RemoveData`</span> כדי למחוק גם את המגבלות השמורות).
 
-לבניית חבילת ההורדה (קובץ zip עצמאי עם `Install.cmd` ו-`Uninstall.cmd`): `.\scripts\package.ps1`.
-הקובץ נוצר ב-`out\ScreenLimiter-<version>.zip`.
+לבניית חבילת ההורדה (קובץ zip עצמאי עם `Install.cmd` ו-`Uninstall.cmd`): <span dir="ltr">`.\scripts\package.ps1`</span>.
+הקובץ נוצר ב-<span dir="ltr">`out\ScreenLimiter-<version>.zip`</span>.
 
 ## מה מקשה לעקוף אותה
 
 הכול נשען על כלל אחד: **המשתמשים המוגבלים חייבים להיות חשבונות רגילים, לא מנהלים.** ואז:
 
 - השירות רץ בתור SYSTEM; משתמש רגיל לא יכול לעצור, לשנות או להסיר אותו.
-- ההגדרות ונתוני השימוש נשמרים ב-`C:\ProgramData\ScreenLimiter`, ורק SYSTEM ומנהלים יכולים לקרוא ולכתוב שם.
+- ההגדרות ונתוני השימוש נשמרים ב-<span dir="ltr">`C:\ProgramData\ScreenLimiter`</span>, ורק SYSTEM ומנהלים יכולים לקרוא ולכתוב שם.
 - השירות בודק דרך Windows מי שולח כל בקשה. רק מנהל עם הרשאות מוגבהות יכול לשנות הגדרות;
   משתמש רגיל יכול רק לקרוא את המצב של עצמו.
 - סגירת הסוכן לא עוזרת: השירות מפעיל אותו מחדש, ואם צריך מנתק את ההפעלה.
